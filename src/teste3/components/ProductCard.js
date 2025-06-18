@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const ProductCard = ({ nome, categoria, quantidade }) => {
   const [qtd, setQuantidade] = useState(() => quantidade);
@@ -7,7 +7,11 @@ const ProductCard = ({ nome, categoria, quantidade }) => {
   return (
     <View style={styles.card}>
       <View style={styles.imagemView}>
-        <View style={{ flex: 0.8, backgroundColor: 'pink', width: 130 }}></View>
+        <Image 
+          source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkAAnwe0aHOuifwhWGL66L-anpHl8390C4zA&s" }} 
+          style={styles.imagem} 
+          resizeMode="cover"
+        />
       </View>
       <View style={styles.prod}>
         <Text style={styles.texto}>{nome}</Text>
@@ -34,7 +38,7 @@ function Botao({ text, funcao }) {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text style={{ color: '#1C1C1C' }}>{text}</Text>
+      <Text style={{ color: '#1C1C1C', fontSize:20 }}>{text}</Text>
     </TouchableOpacity>
   );
 }
@@ -66,7 +70,12 @@ const styles = StyleSheet.create({
   },
   texto: {
     fontSize: 20
-  }
+  },
+  imagem: {
+    flex: 0.8,
+    width: 140,
+    borderRadius: 10, // opcional
+  },
 });
 
 export default ProductCard;

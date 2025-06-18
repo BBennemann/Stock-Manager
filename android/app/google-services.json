@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1081951183790",
+    "project_id": "estoque-unika",
+    "storage_bucket": "estoque-unika.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081951183790:android:1cdb0ee31f500b2839de3f",
+        "android_client_info": {
+          "package_name": "com.trabalho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-6cELBOh1y-zLKDFJqvm6HQA-FazWIEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,23 +1,31 @@
 import React from "react"
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, Image } from "react-native"
 
 export default function Header() {
     return(
         <View style={styles.header}>
-            <Text style={{color: 'white', fontSize: 20}}>---</Text>
-            <Text style={{color: 'white', fontSize: 26}}>Unika</Text>
+            <Image 
+              source={require('../../../src/logo.png')} 
+              style={styles.imagem} 
+              resizeMode="stretch"
+            />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
   header: {
-    height: 100,
+    height: 120,
     flexDirection: 'row',
     paddingHorizontal: 10,
     paddingTop: 15,
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     backgroundColor: '#1C1C1C',
-  }
+  },
+  imagem: {
+    flex: 0.9,
+    height: 70,
+    borderRadius: 10, // opcional
+  },
 })
